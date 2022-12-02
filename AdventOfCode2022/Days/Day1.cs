@@ -2,14 +2,14 @@
 
 namespace AdventOfCode2022.Days
 {
-    public static class Day1
+    public class Day1
     {
 
         public static int GetResultPartOne()
         {
             var input = RequestInput.RequestInputForTheDay(1).Result;
-            
-            List<int> calories = FormatInput(input);
+
+            List<int> calories = input.GetCollectionFromString<int>();
             Dictionary<int, int> caloriesPerElve = GetCaloriesPerElve(calories);
 
             return caloriesPerElve.Values.Max(); 
@@ -19,7 +19,7 @@ namespace AdventOfCode2022.Days
         {
             var input = RequestInput.RequestInputForTheDay(1).Result;
             
-            List<int> calories = FormatInput(input);
+            List<int> calories = input.GetCollectionFromString<int>();
             Dictionary<int, int> caloriesPerElve = GetCaloriesPerElve(calories);
 
             int caloriesOfTrheeElvesWithMoreCalories = 0;
@@ -31,18 +31,6 @@ namespace AdventOfCode2022.Days
             }
 
             return caloriesOfTrheeElvesWithMoreCalories; 
-        }
-
-        private static List<int> FormatInput(string input)
-        {
-            var output = new List<int>();
-            
-            string[] _splitInput = input.Split("\n");
-
-            output.AddRange(_splitInput.Select(x => 
-                x.Equals(String.Empty) ? 0 : int.Parse(x)));
-
-            return output;
         }
 
         private static Dictionary<int, int> GetCaloriesPerElve(List<int> calories)
@@ -65,6 +53,5 @@ namespace AdventOfCode2022.Days
             }
             return caloriesPerElve;
         }
-
     }
 }

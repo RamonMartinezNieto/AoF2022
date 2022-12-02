@@ -10,7 +10,8 @@ namespace AdventOfCode2022
         {
             PrintHeader();
 
-            Print(Day1.GetResultPartOne(), Day1.GetResultPartTwo());
+            Print(1, Day1.GetResultPartOne(), Day1.GetResultPartTwo());
+            Print(2, Day2.GetResultPartOne(), Day2.GetResultPartTwo());
 
             PrintFooter();
             ColorForegroundColor(ConsoleColor.White);
@@ -30,18 +31,18 @@ namespace AdventOfCode2022
             PrintFooterBlock(ConsoleColor.DarkRed);
         }
 
-        private static void Print(object resultOne, object resultTwo)
+        private static void Print(int day, object resultOne, object resultTwo)
         {
             PrintHeaderBlock(ConsoleColor.DarkMagenta);
-            PrintResultIndividual(1, 1, resultOne);
-            PrintResultIndividual(1, 2, resultTwo);
+            PrintResultIndividual(day, 1, resultOne);
+            PrintResultIndividual(day, 2, resultTwo);
             PrintFooterBlock(ConsoleColor.DarkMagenta);
         }      
         
-        private static void Print(object resultOne)
+        private static void Print(int day, object resultOne)
         {
             PrintHeaderBlock(ConsoleColor.DarkMagenta);
-            PrintResultIndividual(1, 1, resultOne);
+            PrintResultIndividual(day, 1, resultOne);
             PrintFooterBlock(ConsoleColor.DarkMagenta);
         }
 
