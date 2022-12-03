@@ -10,8 +10,11 @@ namespace AdventOfCode2022
         {
             PrintHeader();
 
-            Print(1, Day1.GetResultPartOne(), Day1.GetResultPartTwo());
-            Print(2, Day2.GetResultPartOne(), Day2.GetResultPartTwo());
+            //Print(1, Day1.GetResultPartOne(), Day1.GetResultPartTwo());
+            //Print(2, Day2.GetResultPartOne(), Day2.GetResultPartTwo());
+            //Print(3, Day3.GetResultPartOne(), Day3.GetResultPartTwo());
+            //Print(4, Day4.GetResultPartOne(), Day4.GetResultPartTwo());
+            //Print(5, Day5.GetResultPartOne(), Day5.GetResultPartTwo());
 
             PrintFooter();
             ColorForegroundColor(ConsoleColor.White);

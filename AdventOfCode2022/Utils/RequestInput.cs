@@ -2,7 +2,7 @@
 {
     public class RequestInput
     {
-        public static readonly string SESSION = "YOUR_SESSION_CODE";
+        public static readonly string SESSION = "YOUR_SESSION";
         
         public static async Task<string> RequestInputForTheDay(int day) 
         {
@@ -10,12 +10,10 @@
 
             HttpRequestMessage _request = new(HttpMethod.Get, _uri);
             _request.Headers.Add("Cookie", $"session={SESSION}");
-            
-            using (HttpClient _client = new()) 
-            {
-                var result = await _client.SendAsync(_request);
-                return await result.Content.ReadAsStringAsync();
-            }
+
+            using HttpClient _client = new();
+            var result = await _client.SendAsync(_request);
+            return await result.Content.ReadAsStringAsync();
         }
     }
 }
