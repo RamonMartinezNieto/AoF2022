@@ -12,8 +12,6 @@ public class Day3
     public const int LOWERCASE_START = 97 - 1; 
     public const int UPPERCASE_START = 65 - 1; 
     
-
-
     public static int GetResultPartOne()
     {
         int result = 0; 
@@ -40,8 +38,6 @@ public class Day3
         int result = 0;
         var input = GetFormatedCollection();
         var queueElves = new Queue<string>(input);
-        
-        int totalElves = input.Count();
         
         while (queueElves.Any()) 
         {

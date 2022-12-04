@@ -13,7 +13,9 @@ namespace AdventOfCode2022
             //Print(1, Day1.GetResultPartOne(), Day1.GetResultPartTwo());
             //Print(2, Day2.GetResultPartOne(), Day2.GetResultPartTwo());
             //Print(3, Day3.GetResultPartOne(), Day3.GetResultPartTwo());
-            //Print(4, Day4.GetResultPartOne(), Day4.GetResultPartTwo());
+
+            var (counterZonesIn, overLapSections) = Day4.GetResultPartOne();
+            Print(4, counterZonesIn, overLapSections);
             //Print(5, Day5.GetResultPartOne(), Day5.GetResultPartTwo());
 
             PrintFooter();

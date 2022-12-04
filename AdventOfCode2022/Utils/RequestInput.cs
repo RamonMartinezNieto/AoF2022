@@ -2,7 +2,7 @@
 {
     public class RequestInput
     {
-        public static readonly string SESSION = "YOUR_SESSION";
+        public static readonly string SESSION = "YOUT_SESSION_CODE";
         
         public static async Task<string> RequestInputForTheDay(int day) 
         {
