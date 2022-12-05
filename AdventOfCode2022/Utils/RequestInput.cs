@@ -1,9 +1,16 @@
 ﻿namespace AdventOfCode2022.Utils
 {
+
     public class RequestInput
     {
-        public static readonly string SESSION = "YOUT_SESSION_CODE";
-        
+        public static readonly string SESSION = ":)";
+
+        public static List<string> GetFormatedCollection(int day)
+        {
+            string _input = RequestInput.RequestInputForTheDay(day).Result;
+            return _input.GetCollectionFromString<string>();
+        }
+
         public static async Task<string> RequestInputForTheDay(int day) 
         {
             Uri _uri = new (@$"https://adventofcode.com/2022/day/{day}/input");

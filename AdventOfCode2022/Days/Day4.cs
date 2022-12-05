@@ -7,7 +7,7 @@ internal class Day4
 
     internal static (int counterZonesIn, int overLapSections) GetResultPartOne()
     {
-        List<PairElves> pairOfEleves = FormatInput(GetFormatedCollection());
+        List<PairElves> pairOfEleves = FormatInput(RequestInput.GetFormatedCollection(4));
 
         int counterZonesIn = 0;
         int overLapSections = 0;

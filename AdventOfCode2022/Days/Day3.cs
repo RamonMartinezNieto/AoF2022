@@ -15,8 +15,8 @@ public class Day3
     public static int GetResultPartOne()
     {
         int result = 0; 
-        var input = GetFormatedCollection();
-        
+        var input = RequestInput.GetFormatedCollection(3);
+
         foreach (var item in input) 
         {
             if (item.Equals("")) continue;
@@ -36,7 +36,7 @@ public class Day3
     internal static object GetResultPartTwo()
     {
         int result = 0;
-        var input = GetFormatedCollection();
+        var input = RequestInput.GetFormatedCollection(3);
         var queueElves = new Queue<string>(input);
         
         while (queueElves.Any()) 
@@ -61,12 +61,6 @@ public class Day3
         }
 
         return result;
-    }
-
-    private static List<string> GetFormatedCollection()
-    {
-        string _input = RequestInput.RequestInputForTheDay(3).Result;
-        return _input.GetCollectionFromString<string>();
     }
 
     private static int GetPointsOfLetters(int asciiLetterMatch) 

@@ -36,10 +36,9 @@ internal class Day2
         { 'Z', WIN }
     };
 
-
     public static int GetResultPartOne()
     {
-        List<string> _plays = GetFormatedCollection();
+        List<string> _plays = RequestInput.GetFormatedCollection(2);
         int _totalScore = 0;
 
         foreach (var _game in _plays) 
@@ -54,7 +53,7 @@ internal class Day2
 
     public static int GetResultPartTwo()
     {
-        List<string> _plays = GetFormatedCollection();
+        List<string> _plays = RequestInput.GetFormatedCollection(2);
         int _totalScore = 0;
 
         foreach (var _game in _plays)
@@ -67,12 +66,7 @@ internal class Day2
         return _totalScore;
     }
 
-    private static List<string> GetFormatedCollection() 
-    {
-        string _input = RequestInput.RequestInputForTheDay(2).Result;
-        return _input.GetCollectionFromString<string>();
-    }
-
+ 
     private static int CalculateScore(char player, char ourGame)
     {
         int whoWon = rules[$"{player}{ourGame}"];
