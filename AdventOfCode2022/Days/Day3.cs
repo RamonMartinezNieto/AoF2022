@@ -72,7 +72,7 @@ public class Day3
     public static int GetResultPartOneSeMeFueLaPinzaConLookup()
     {
         int result = 0;
-        var input = GetFormatedCollection().ToArray();
+        var input = RequestInput.GetFormatedCollection(3).ToArray();
 
         var map = input.Select(x => {
             var _mid = x.Length / 2;

@@ -18,6 +18,7 @@ namespace AdventOfCode2022
             //Print(4, counterZonesIn, overLapSections);
 
             //Print(5, Day5.GetResultPartOne(),  Day5.GetResultPartTwo());
+            Print(6, Day6.GetResultPartOne(), Day6.GetResultPartTwo()); 
 
             PrintFooter();
             ColorForegroundColor(ConsoleColor.White);
